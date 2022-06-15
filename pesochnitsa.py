@@ -1,26 +1,17 @@
 
-class Square:
-    _a = None
 
-    def __init__(self, a):
-        self.a = a
+try:
+    age = int(input("Сколько тебе лет?"))
 
-    @property
-    def a(self):
-        return self._a
+    if age > 100 or age <= 0:
+        raise ValueError("Тебе не может быть столько лет")
 
-    @a.setter
-    def a(self, value):
-        if value > 0:
-            self._a = value
+    print(f"Тебе {age} лет!")
+except ValueError:
+    print("Неправильный возраст")
 
-    @property
-    def area(self):
-        return self.a ** 2
 
-d_1 = Square(10)
 
-print(d_1.area)
 
 
 
